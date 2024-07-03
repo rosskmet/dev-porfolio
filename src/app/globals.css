@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind apply;
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -30,4 +31,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+hr.rounded {
+  border-top: 8px solid grey;
+  border-radius: 5px;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 2px solid grey;
 }
