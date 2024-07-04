@@ -14,8 +14,10 @@ export default function HeroSection() {
                         </span> 
                         <br/> Get a Better Bottom Line.
                     </h1>
-                    <h4 className="text-xl text-orange-600">That's What I Bring To the Table.</h4>
-                    <p className="md:w-96 text-lg text-center lg:text-left text-indigo-500">
+                    <h4 className="text-xl text-white underline underline-offset-8 decoration-indigo-600">
+                        That's What I Bring To the Table.
+                    </h4>
+                    <p className="md:w-96 text-lg text-center lg:text-left text-orange-500">
                         {"I'm Ross, a Los Angeles based Full-Stack Web Developer, Data Engineer, and Software Engineer."}
                     </p>
                 </div>

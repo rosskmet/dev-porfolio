@@ -37,9 +37,11 @@ export default async function Post({ params }: Props) {
         <h1 className='font-extrabold text-3xl mb-1'>{postData.title}</h1>
 
         <div className='text-gray-500 font-medium mb-5'>
-          <Date dateString={postData.date} />
+          //// <Date dateString={postData.date} />
         </div>
-
+        <div className="py-3 text-gray-500">
+          //// Tags: ...
+        </div>
         <div className="">
           <Image 
             alt="Post Image" 
@@ -50,10 +52,8 @@ export default async function Post({ params }: Props) {
             style={{ width: '100%', height: 'auto'}} // optional
           />
         </div>
-
-        {/* Post Content */}
         <div
-          className='py-10 text-green-600'
+          className='py-10 px-10 text-green-600'
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </div>
