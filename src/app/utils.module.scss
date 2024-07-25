@@ -77,3 +77,21 @@
   color: transparent;
   transition: 500ms ease;
 } 
+
+.spiral {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.in-front {
+  z-index: 100;
+  position: static;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}

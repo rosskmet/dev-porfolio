@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { Space_Grotesk } from "next/font/google";
@@ -30,7 +30,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
         >
-          <div className="min-h-screen bg-black overflow-hidden">
+          <div className="min-h-screen bg-transparent overflow-hidden">
               <div className="max-w-7xl mx-auto p-5">
                 <Navbar />
                   {children}

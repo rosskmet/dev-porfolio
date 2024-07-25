@@ -18,7 +18,7 @@ export default function BlogPage() {
     <>
       <div className="y-3 min-h-screen">
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <h1 className={utilStyles.headingXl}>Some Thoughts...</h1>
+          <h1 className={utilStyles.headingXl}>Projects</h1>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>

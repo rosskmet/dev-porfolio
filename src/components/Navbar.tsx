@@ -37,7 +37,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-2">
                     <Button variant="link">
                         <Link href="/blog">
-                            Blog
+                            Projects
                         </Link>
                     </Button>
                     <div className="py-2"> | </div>
