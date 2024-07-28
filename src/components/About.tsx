@@ -1,6 +1,10 @@
+import React, { useEffect } from 'react';
+import { motion, Variants } from "framer-motion";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import utilStyles from '@/app/utils.module.scss';
+
 import { Button } from '@/components/ui/button';
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
@@ -10,9 +14,78 @@ import { RiSoundcloudLine } from "react-icons/ri";
 
 import SectionHeader from '@/components/SectionHeader';
 import Separator from '@/components/Separator';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 
-const Spiral = dynamic(() => import('@/components/Spiral'))
+// const Spiral = dynamic(() => import('@/components/Spiral'))
+
+// interface Props {
+//     pSection: HTMLDivElement;
+// }
+
+// const sectionVariants: Variants = {
+//     offscreen: {
+//       y: 300
+//     },
+//     onscreen: {
+//       y: 50,
+//       rotate: -10,
+//       transition: {
+//         type: "spring",
+//         bounce: 0.4,
+//         duration: 0.8
+//       }
+//     }
+//   };
+
+// function SlideSection( {pSection}: Props ) {
+//     return (
+//         <>
+//     <motion.div
+//       className="left-right"
+//       initial="offscreen"
+//       whileInView="onscreen"
+//       viewport={{ once: true, amount: 0.8 }}
+//     >
+//       <motion.div className="card" variants={sectionVariants}>
+//         {pSection}
+//       </motion.div>
+//     </motion.div>
+//         </>
+//     )
+// }
+
+// function Expertise() {
+//     return (
+//         <div className="max-w-3xl">
+//             <div className="py-20 slider">
+//                 <h2 className="text-3xl">Expertise</h2>
+//                 <Separator width="max-w-2xl" />
+//                 <pre className={`${utilStyles.tab}`}>
+//                     <span className="underline underline-offset-8 decoration-indigo-500">Languages</span>
+//                     <br/>////   C++, C#, Python, Javascript, Typescript, SQL
+//                     <br/><br/>
+//                     <span className="underline underline-offset-8 decoration-indigo-500">Backend + Data</span>
+//                     <br/>////   NodeJS, PostgreSQL, Kafka, Spark, SparkMlib, Pandas, Airflow
+//                     <br/><br/>
+//                     <span className="underline underline-offset-8 decoration-indigo-500">Frontend + UI</span>
+//                     <br/>////   HTML, CSS, NextJS, React, Svelte, Windows Forms, WPF
+//                     <br/><br/>
+//                     <span className="underline underline-offset-8 decoration-indigo-500">Cloud</span>
+//                     <br/>////   Docker, Kubernetes, Terraform
+//                     <br/>////   AWS: VPC, Route53, EC2, Lambda, Glue, EKS, ECS, RDS, Redshift
+//                     <br/>////   GCP:
+//                     <br/><br/>
+//                     <span className="underline underline-offset-8 decoration-indigo-500">Prototyping</span>
+//                     <br/>////   Figma, Max/MSP, Pure Data
+//                     <br/><br/>
+//                     <span className="underline underline-offset-8 decoration-indigo-500">Audio</span>
+//                     <br/>////   JUCE, Max/MSP
+//                     <br/><br/>
+//                 </pre>
+//             </div>
+//         </div>
+//     )
+// }
 
 export default function About() {
 
@@ -86,31 +159,34 @@ export default function About() {
                                     </Link>
                                 })} 
                             </div>
-                    <div className="py-20">
-                        <h2 className="text-3xl">Expertise</h2>
-                        <Separator width="max-w-2xl" />
-                        <pre className={`${utilStyles.tab}`}>
-                            <span className="underline underline-offset-8 decoration-indigo-500">Languages</span>
-                            <br/>////   C++, C#, Python, Javascript, Typescript, SQL
-                            <br/><br/>
-                            <span className="underline underline-offset-8 decoration-indigo-500">Backend + Data</span>
-                            <br/>////   NodeJS, PostgreSQL, Kafka, Spark, SparkMlib, Pandas, Airflow
-                            <br/><br/>
-                            <span className="underline underline-offset-8 decoration-indigo-500">Frontend + UI</span>
-                            <br/>////   HTML, CSS, NextJS, React, Svelte, Windows Forms, WPF
-                            <br/><br/>
-                            <span className="underline underline-offset-8 decoration-indigo-500">Cloud</span>
-                            <br/>////   Docker, Kubernetes, Terraform
-                            <br/>////   AWS: VPC, Route53, EC2, Lambda, Glue, EKS, ECS, RDS, Redshift
-                            <br/>////   GCP:
-                            <br/><br/>
-                            <span className="underline underline-offset-8 decoration-indigo-500">Prototyping</span>
-                            <br/>////   Figma, Max/MSP, Pure Data
-                            <br/><br/>
-                            <span className="underline underline-offset-8 decoration-indigo-500">Audio</span>
-                            <br/>////   JUCE, Max/MSP
-                            <br/><br/>
-                        </pre>
+                    {/* <SlideSection pSection={ Expertise() } /> */}
+                    <div className="left-right max-w-3xl">
+                        <div className="py-20 slider">
+                            <h2 className="text-3xl">Expertise</h2>
+                            <Separator width="max-w-2xl" />
+                            <pre className={`${utilStyles.tab}`}>
+                                <span className="underline underline-offset-8 decoration-indigo-500">Languages</span>
+                                <br/>////   C++, C#, Python, Javascript, Typescript, SQL
+                                <br/><br/>
+                                <span className="underline underline-offset-8 decoration-indigo-500">Backend + Data</span>
+                                <br/>////   NodeJS, PostgreSQL, Kafka, Spark, SparkMlib, Pandas, Airflow
+                                <br/><br/>
+                                <span className="underline underline-offset-8 decoration-indigo-500">Frontend + UI</span>
+                                <br/>////   HTML, CSS, NextJS, React, Svelte, Windows Forms, WPF
+                                <br/><br/>
+                                <span className="underline underline-offset-8 decoration-indigo-500">Cloud</span>
+                                <br/>////   Docker, Kubernetes, Terraform
+                                <br/>////   AWS: VPC, Route53, EC2, Lambda, Glue, EKS, ECS, RDS, Redshift
+                                <br/>////   GCP:
+                                <br/><br/>
+                                <span className="underline underline-offset-8 decoration-indigo-500">Prototyping</span>
+                                <br/>////   Figma, Max/MSP, Pure Data
+                                <br/><br/>
+                                <span className="underline underline-offset-8 decoration-indigo-500">Audio</span>
+                                <br/>////   JUCE, Max/MSP
+                                <br/><br/>
+                            </pre>
+                        </div>
                     </div>
                     <div className="py-20">
                         <h2 className="text-3xl">Experience</h2>
